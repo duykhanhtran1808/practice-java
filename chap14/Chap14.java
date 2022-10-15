@@ -1,15 +1,28 @@
 package chap14;
 
 import javax.swing.*;
+import java.awt.event.*;
 
-public class Chap14 {
+public class Chap14 implements ActionListener {
+    private JButton button;
     public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        JButton button = new JButton("Click me");
-        frame.getContentPane().add(button);
+        Chap14 gui = new Chap14();
+        gui.go();
+    }
 
+    public void go() {
+        JFrame frame = new JFrame();
+        button = new JButton("Click me");
+
+        button.addActionListener(this);
+
+        frame.getContentPane().add(button);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500,500);
         frame.setVisible(true);
-        System.out.println("Ocean");
+    }
+
+    public void actionPerformed(ActionEvent event) {
+        button.setText("Hello");
     }
 }

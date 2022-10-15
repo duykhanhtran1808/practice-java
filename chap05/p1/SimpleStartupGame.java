@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class SimpleStartupGame {
-    GameHelper helper = new GameHelp();
+    // GameHelper helper = new GameHelp();
     ArrayList<SimpleStartup> startups;
     int numOfGuesses = 0;
     public static void main(String[] args) {
@@ -58,15 +58,15 @@ public class SimpleStartupGame {
         System.out.println("Try to sink them all in the fewest number of guesses");
 
         for(SimpleStartup startup: startups) {
-            ArrayList<String> newLoc = helper.placeStartup(3);
-            startup.setLocationCells(newLoc);
+            // ArrayList<String> newLoc = helper.placeStartup(3);
+            // startup.setLocationCells(newLoc);
         }
     }
 
     private void startPlaying() {
         while(!startups.isEmpty()) {
-            String userGuess = helper.getUserInput("Enter a guess");
-            checkUserGuess(userGuess);
+            // String userGuess = helper.getUserInput("Enter a guess");
+            // checkUserGuess(userGuess);
         }
         finishGame();
     }

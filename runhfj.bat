@@ -1,2 +1,2 @@
-javac chap14\Chap14.java 
-java chap14.Chap14
+javac chap16\Prog.java 
+java chap16.Prog
